@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script async src="tool.js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-123497536-4');
+</script>
+<title>Hattemi — Instant custom animation that spells any word you want</title>
+<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta property="og:image" content="https://hattemi.com/ogimage-min.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:creator" content="@bemmu"/>
+<meta name="twitter:title" content="Instant custom animation that forms any word or image you want"/>
+<meta name="twitter:image" content="https://hattemi.com/ogimage-min.png"/>
+<!-- <link href="https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap" rel="stylesheet"> -->
+<script src="app.js"></script>
+</head>
+<body>
+
+	<div class="top">
+		<div class="example">
+			<a target="_new" href="https://www.youtube.com/watch?v=AyWqcY_oyo4"><img src="youtube.png"></a>
+
+		</div>
+		<div class="logo_container">
+			<img class="logo" src="logo.svg">
+			<span>HATTEMI</span>
+		</div>
+		<div class="explanation">
+<!--			<p>Previously known as CustomAnim. Had to change the name, as Twitter would not allow linking to it for some reason.</p>
+			<p style="font-family:arial;font-weight:200;font-size:12px;">なぜかTwitterにこのサイトのリンクを貼ることができない状態になっていたので、名前を「貼ってみ」に変えました。</p>-->
+		</div>
+	</div>
+
+
+	<div class="widget">
+<!--		<h2>What shall your candy animation spell?</h2>-->
+
+		<video id="candy_select" src="candy_end.mp4" autoplay="autoplay" loop></video>
+		<video id="umbrella_select" src="umbrella_end.mp4" autoplay="autoplay" loop></video>
+
+		<select style="font-size:20px;display:block;margin-bottom:20px;">
+			<option value="candy">3D效果</option>
+			<option value="umbrella">2D效果</option>
+		</select>
+
+		<input type="text" id="str" value="HELLO" autofocus style="display:block;float:left;">
+		<div style="display:block;float:left;margin:10px;margin-right:30px;">/</div>
+		<div style="display:block;float:left;position:relative;">
+			<!-- <button id="button_under_upload_picture">Use Image</button> -->
+			<span style="font-size:42px;">📷</span>
+			<input type="file" id="upload_picture" accept="image/*" style="opacity:0;width:100%;display:block;float:left;position:absolute;left:0px;top:0px;cursor:pointer;">
+		</div>
+		<br clear="all">
+		<div style="margin-top:20px;">
+			<button id="preview_button" class="inactive">Preview</button>
+			<button id="render_button" style="display: none;" class="inactive">Make video</button>
+		</div>
+	</div>
+
+	<div class="progress_container">
+		<div class="progress">
+			<div id="inner_progress_background"></div>
+			<div id="inner_progress"></div>
+			<div id="progress_message">Loading preview data...</div>
+		</div>
+	</div>
+
+	<div class="preview">
+<!--		<span>Preview of final frame</span>-->
+		<img src="hello.png" style="max-width:100%;" id="preview_img">
+		<canvas width="1280" height="720" id="preview_canvas" style="max-width:100%;display:none;"></canvas>
+	</div>
+
+	<div id="result">
+		<a style="float:right" id="download_link" download>↓ download</a>
+		<span>Render result (file download available for 1 hour)</span><br>
+		<video controls autoplay id="video">
+	</div>
+
+
+	<canvas width="1280" height="720" id="target_canvas"></canvas>
+	<canvas width="1280" height="720" id="object_canvas"></canvas>
+	<canvas width="1280" height="720" id="shade_canvas"></canvas>
+
+	<img src="preview_object_map_candy.png" id="object_img_candy">
+	<img src="preview_shade_candy.png" id="shade_img_candy">
+	<img src="preview_object_map_umbrella.png" id="object_img_umbrella">
+	<img src="preview_shade_umbrella.png" id="shade_img_umbrella">
+
+	<div class="spice" id="spice">
+		<span class="animalUnicode"></span><span class="animalUnicode"></span><span class="animalUnicode"></span> <a target="_new" href="https://twitter.com/bemmu">@ayuan</a> 
+	</div>
+
+</body>
+</html>

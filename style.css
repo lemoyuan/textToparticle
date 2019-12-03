@@ -1,0 +1,196 @@
+
+body {
+	font-family: 'Darker Grotesque', sans-serif;
+	color: hsl(210, 60%, 10%);
+	max-width: 900px;
+	margin: 0 auto;	
+	padding: 20px;
+}
+
+.top {
+/*	border: solid 1px red;
+*/
+	width: 100%;
+	padding: 1px;
+}
+
+.example { 
+	display: block;
+	float: right;
+	margin-top: 26px;
+}
+.example a {
+	text-decoration: none;
+	color: navy;
+}
+.example img {
+	height: 16px;
+	display: block;
+	float: left;
+	margin-right: 5px;
+	margin-top: 4px;
+}
+
+.logo_container {
+	position: relative;
+	height: 32px;
+	width: 128px;
+	margin-top: 20px;
+}
+.logo {
+	position: absolute;
+	width: 32px;
+	top: 0px;
+}
+.logo_container span {
+	font-family: -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue;
+	font-weight: 400;
+	position: absolute;
+	top: 8px;
+	left: 35px;
+	letter-spacing: 1px;
+}
+
+.widget {
+	/*border: solid 1px red;*/
+	background: hsl(208, 33%, 97%);
+	border: solid 1px hsl(208, 33%, 95%);
+	border-radius: 16px;
+	padding: 30px 35px;	
+	margin-top: 50px;
+	box-shadow: 0px 2px 4px hsla(215, 40%, 87%, 20%), 0px 20px 20px hsla(215, 40%, 87%, 10%);
+}
+h2 {
+	font-weight: 500;
+	font-size: 42px;
+	margin: -10px 0 30px 0;
+}
+input {
+	border: solid 2px hsl(215, 40%, 87%);
+	font-size: 24px;
+	border-radius: 8px;
+	padding: 10px 15px;
+}
+input[type=text] {
+	margin-right: 20px;	
+	margin-bottom: 10px;
+}
+input[type=text]:focus { 
+	outline: none; 
+}
+button {
+	border: solid 2px hsl(215, 40%, 87%);
+	font-size: 24px;
+	border-radius: 8px;
+	padding: 10px 15px;
+
+	border: solid 2px hsl(208,60%,49%);
+	background: hsl(208,60%,49%);
+	color: white;
+	cursor: pointer;
+	font-weight: 200;
+	margin-right: 8px;	
+}
+button.inactive {
+	border: solid 2px hsl(208,0%,49%);
+	background: hsl(208,60%,95%);
+	color: hsl(208,0%,49%);
+	cursor: wait;
+}
+button:hover {
+	background: hsl(208,60%,53%);
+}
+button.inactive:hover {
+	background: hsl(208,60%,95%);
+}
+
+.spice {
+	/* Expands consciousness. Vital to space travel. Travel, without moving. */
+	opacity: .7;
+	font-size: 16px;
+	color: hsl(210, 10%, 40%);
+	margin-top: 20px;
+	display: none;
+}
+.spice a {
+	text-decoration: none;
+	color: black;
+}
+
+.preview {
+	display: none;
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+.preview span {
+	display: block;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+canvas {
+	margin-top:0px;
+	/*border: solid 1px black;*/
+	box-shadow: 0px 2px 4px hsla(215, 0%, 0%, 20%), 0px 20px 20px hsla(215, 0%, 0%, 10%);
+}
+
+#object_img_umbrella, #shade_img_umbrella, #object_img_candy, #object_canvas, #shade_img_candy, #shade_canvas, #target_canvas {
+	display: none;
+}
+
+#result {
+	margin-top: 30px;
+	display: none;
+}
+video {
+	max-width: 100%;
+}
+
+.progress_container {
+	margin-top: 30px;
+	display: table; /* --> display: table */
+}
+
+.progress {
+	box-sizing: border-box;
+	border: solid 3px hsl(202, 69%, 50%);
+	border-radius: 10px;
+	width: 1%;
+	padding: 10px;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	position: relative;
+}
+#inner_progress_background {
+	box-sizing: border-box;
+	margin-top:0px;
+	width: 100%;
+	height: 40px;
+	background: hsl(202, 69%, 65%);	
+}
+#inner_progress {
+	box-sizing: border-box;
+	margin-top:-40px;
+	width: 100%;
+	height: 40px;
+	background: hsl(202, 69%, 50%);	
+}
+#progress_message {
+	box-sizing: border-box;
+	margin-top:-40px;
+	width: 100%;
+	height: 40px;
+	color: white;
+	font-size: 24px;
+}
+
+.widget video {
+	margin-right: 20px;
+	border:solid 2px white;
+	cursor:pointer;
+}
+
+.widget video.selected {
+	border:solid 2px black;
+	cursor:default;
+}
